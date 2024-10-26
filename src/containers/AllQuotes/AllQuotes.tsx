@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 const AllQuotes = () => {
   const [quotes, setQuotes] = useState<Quote[]>([]);
 
-  const fetchQuotes = useCallback(async () => {
+  const fetchQuotes = useCallback (async () => {
     const response = await axiosApi<ApiQuotes | null>('/quotes.json');
 
     const quotesResponse = response.data;

@@ -5,7 +5,6 @@ import AllQuotes from "./containers/AllQuotes/AllQuotes.tsx";
 import CategoryQuotes from "./containers/CategoryQuotes/CategoryQuotes.tsx";
 import MutateQuote from "./containers/MutateQuote/MutateQuote.tsx";
 
-
 const App = () => {
     return (
         <>
@@ -15,9 +14,9 @@ const App = () => {
             <Container component='main'>
                 <Routes>
                     <Route path='/' element={<AllQuotes />} />
-                    <Route path='/quotes' element={<CategoryQuotes />} />
+                    <Route path='/quotes/:category' element={<CategoryQuotes />} />
                     <Route path='/new-quote' element={<MutateQuote />} />
-                    <Route path='/new-quote/:id/edit' element={<MutateQuote />} />
+                    <Route path='/quotes/:id/edit' element={<MutateQuote />} />
                     <Route path='*' element={<Typography variant='h2'>Not Found</Typography>} />
                 </Routes>
             </Container>
