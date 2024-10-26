@@ -17,6 +17,7 @@ const App = () => {
                     <Route path='/' element={<AllQuotes />} />
                     <Route path='/quotes' element={<CategoryQuotes />} />
                     <Route path='/new-quote' element={<MutateQuote />} />
+                    <Route path='/new-quote/:id/edit' element={<MutateQuote />} />
                     <Route path='*' element={<Typography variant='h2'>Not Found</Typography>} />
                 </Routes>
             </Container>
